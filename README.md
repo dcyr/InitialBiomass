@@ -2,7 +2,7 @@
 Dominic cyr  
 Updated on Jul 10 2015
 
-This document presents summary statistics of initial biomass, as estimated by [Beaudoin et al (2014)][1], for all quadrats that are part of an ongoing simulation experiments conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
+This document presents summary statistics of initial biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiments conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
 
 The following summary statistics are computed for what are considered 'active' forest pixels in our simulations, i.e. those that are made of at least 50% of productive forest (250-m resolution).
 
@@ -37,24 +37,24 @@ The methodology and known biases associated with the following results are descr
 
 
 ```
-##   SimulationArea meanAGBiomass_TonsPerHa maxAGBiomass_TonsPerHa
-## 1             AM                  68.022                199.671
-## 2             BC                  46.321                239.479
-## 3             BP                  40.216                160.997
-## 4            BSE                  73.710                179.622
-## 5            BSW                  61.791                159.982
-## 6             MC                 127.027                349.978
-## 7             PM                 259.102                605.389
-## 8             TP                  24.903                149.239
+##          SimulationArea meanAGBiomass_TonsPerHa maxAGBiomass_TonsPerHa
+## 1     Atlantic Maritime                    68.0                  199.7
+## 2     Boreal Cordillera                    46.3                  239.5
+## 3          Boreal Plain                    40.2                  161.0
+## 4 Eastern Boreal Shield                    73.7                  179.6
+## 5 Western Boreal Shield                    61.8                  160.0
+## 6    Montane Cordillera                   127.0                  350.0
+## 7      Pacific Maritime                   259.1                  605.4
+## 8           Taiga Plain                    24.9                  149.2
 ##   quantile0.05 quantile0.25 quantile0.5 quantile0.75 quantile0.95
-## 1       20.430       46.650      66.382       89.955      118.007
-## 2        0.000        6.762      36.035       78.914      123.740
-## 3        0.000        7.413      36.279       64.155      102.485
-## 4       19.864       55.778      74.253       92.066      124.678
-## 5        0.000       37.482      64.765       88.194      114.181
-## 6       20.058       77.791     127.414      175.546      230.411
-## 7       91.868      185.636     261.176      328.235      430.484
-## 8        0.932        6.276      20.372       36.691       70.301
+## 1         20.4         46.6        66.4         90.0        118.0
+## 2          0.0          6.8        36.0         78.9        123.7
+## 3          0.0          7.4        36.3         64.2        102.5
+## 4         19.9         55.8        74.3         92.1        124.7
+## 5          0.0         37.5        64.8         88.2        114.2
+## 6         20.1         77.8       127.4        175.5        230.4
+## 7         91.9        185.6       261.2        328.2        430.5
+## 8          0.9          6.3        20.4         36.7         70.3
 ```
 
 Individual species' initial biomass are contained in the following '.csv' tables:
