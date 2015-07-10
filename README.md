@@ -2,9 +2,9 @@
 Dominic cyr  
 Updated on Jul 10 2015
 
-This document presents summary statistics of initial biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiments conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
+This document presents summary statistics of initial biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiment conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
 
-The following summary statistics are computed for what are considered 'active' forest pixels in our simulations, i.e. those that are made of at least 50% of productive forest (250-m resolution).
+The following summary statistics are computed for what are considered 'active' forest pixels in our simulations, i.e. those that are made of at least 50% of productive forest at a 250-m resolution.
 
 The methodology and known biases associated with the following results are described in [Beaudoin et al][1]'s paper.
 
@@ -57,7 +57,7 @@ The methodology and known biases associated with the following results are descr
 ## 8          0.9          6.3        20.4         36.7         70.3
 ```
 
-Individual species' initial biomass are contained in the following '.csv' tables:
+Individual species' initial biomass can be found in the following '.csv' tables:
 
 1. Atlantic Maritime ([Display][2]/[Download][3])
 2. Boreal Cordillera ([Display][4]/[Download][5])
