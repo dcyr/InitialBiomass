@@ -1,8 +1,8 @@
-# Initial Biomass - K-Nearest Neighbourg Estimations
+# Initial Tree Aboveground Biomass - K-Nearest Neighbourg Estimations
 Dominic cyr  
 Updated on Jul 10 2015
 
-This document presents summary statistics of initial biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiment conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
+This document presents summary statistics of initial tree aboveground biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiment conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
 
 The following summary statistics are computed for what are considered 'active' forest pixels in our simulations, i.e. those that are made of at least 50% of productive forest at a 250-m resolution.
 
@@ -33,7 +33,7 @@ The methodology and known biases associated with the following results are descr
 
 
 ###Initial Biomass - K-Nearest Neighbourg Estimations
-####Summary statistics - Total above ground biomass
+####Summary statistics - Total aboveground biomass
 
 
 ```
