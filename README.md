@@ -28,7 +28,7 @@ The methodology and known biases associated with the following results are descr
 
 
 
-###Simulation areas
+
 <img src="README_files/figure-html/mapPlot-1.png" title="" alt="" style="display: block; margin: auto auto auto 0;" />
 
 
