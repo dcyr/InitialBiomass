@@ -1,4 +1,4 @@
-# Initial Tree Aboveground Biomass - K-Nearest Neighbourg Estimations
+# Initial Aboveground Biomass - k-NN Estimations
 Dominic cyr  
 Updated on Jul 10 2015
 
