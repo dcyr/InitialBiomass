@@ -1,6 +1,6 @@
 # Initial Aboveground Biomass - k-NN Estimations
 Dominic cyr  
-Updated on Jul 10 2015
+Updated on Oct 27 2015
 
 This document presents summary statistics of initial tree aboveground biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiment conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
 
