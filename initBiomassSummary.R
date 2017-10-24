@@ -3,8 +3,9 @@ require(raster)
 require(dplyr)
 require(RCurl)
 #setwd("/home/dcyr/Dropbox/LANDIS-II_IA_SCF/InitBiomassData")
-inputFolder <- "~/Travail/SCF/BiomassKnn"
+inputFolder <- "~/Travail/SCF/BiomassKnn/Data"
 setwd(inputFolder)
+setwd("../")
 wwd <- paste(getwd(), Sys.Date(), sep="/")
 dir.create(wwd)
 setwd(wwd)
@@ -29,9 +30,9 @@ spp <- as.character(lapply(info, function(x) x[3]))
 spp <- gsub(".tif", "", spp)
 
 
+a <- "Acadian"
 
-
-for (a in unique(areas)) { # a <- "BSE"
+#for (a in unique(areas)) { # a <- "BSE"
     index <- grep(a, areas)
     summaryStats <- data.frame(species = c(spp[index], "Total"))
     
@@ -69,4 +70,4 @@ for (a in unique(areas)) { # a <- "BSE"
 
 
     write.csv(summaryStats, file = paste0("initBiomassSummaryStats_", a, ".csv"), row.names = F)
-}
+#}

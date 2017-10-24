@@ -3,8 +3,9 @@ require(raster)
 require(dplyr)
 require(RCurl)
 #setwd("/home/dcyr/Dropbox/LANDIS-II_IA_SCF/InitBiomassData")
-inputFolder <- "~/Travail/SCF/BiomassKnn"
+inputFolder <- "~/Travail/SCF/BiomassKnn/Data"
 setwd(inputFolder)
+setwd("../")
 wwd <- paste(getwd(), Sys.Date(), sep="/")
 dir.create(wwd)
 setwd(wwd)
@@ -17,7 +18,7 @@ vegCodes <- read.csv(text = getURL(paste(readURL, "vegCodes.csv", sep="/")))
 ecozones <- read.csv(text = getURL(paste(readURL, "ecoNames.csv", sep="/")))
 
 #areas <- c("AM", "BC", "BP", "BSE", "BSW", "MC", "PM", "TP")
-areas <- "ALPAC"
+areas <- "Acadian"
 
 
 
