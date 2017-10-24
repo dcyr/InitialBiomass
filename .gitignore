@@ -1,0 +1,12 @@
+.Rhistory
+[0-9]*
+Data
+sourceData
+temp
+subsetShapefile
+*.Rmd
+*.html
+*~
+*.rds
+*.html
+
