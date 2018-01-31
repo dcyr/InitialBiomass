@@ -16,8 +16,8 @@ ecozones <- read.csv(text = getURL(paste(readURL, "ecoNames.csv", sep="/")))
 # vegCodes[vegCodes$NorthShore == 1,]
 # head(vegCodes[vegCodes$NorthShore == 1,])
 
-#areas <- c("AM", "BC", "BP", "BSE", "BSW", "MC", "PM", "TP")
-areas <- "ALPAC"
+#areas <- c("Acadian", "AM", "BSE", "SudStl", "NorthShore", "QcCentral" "QcNb")
+areas <- "LSJ"
 
 a <- areas[1]
 
@@ -50,21 +50,14 @@ for (i in seq_along(spp)) {
     r <- crop(r, landtypes)
     
     ### special cases where multiple species where summed up
-    if (sp == "ACER.RUB") { ## combine with ACER.SAH and ACER.SAC
-        r2 <- raster(paste("../sourceData", files[grep("ACER.SAH", spInfo)], sep ="/"))
-        r2 <- crop(r2, landtypes)
-        r3 <- raster(paste("../sourceData", files[grep("ACER.SAC", spInfo)], sep ="/"))
-        r3 <- crop(r3, landtypes)
-        r <- r + r2 + r3
-    }
     if (sp == "POPU.TRE") { ## combine with POPU.BAL and POPU.SPP
         r2 <- raster(paste("../sourceData", files[grep("POPU.BAL", spInfo)], sep ="/"))
         r2 <- crop(r2, landtypes)
         r3 <- raster(paste("../sourceData", files[grep("POPU.SPP", spInfo)], sep ="/"))
         r3 <- crop(r3, landtypes)
-        #plot(r2)
         r <- r + r2 + r3
     }
+  
     # convert total tons to tons per ha 
     r <- r / (prod(res(r))/10000)
     # consider only productive forests

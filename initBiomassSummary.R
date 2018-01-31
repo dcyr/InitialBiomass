@@ -29,26 +29,28 @@ areas <- as.character(lapply(info, function(x) x[2]))
 spp <- as.character(lapply(info, function(x) x[3]))
 spp <- gsub(".tif", "", spp)
 
-
-a <- "Acadian"
-
-#for (a in unique(areas)) { # a <- "BSE"
+#for (a in unique(areas)) {
+    a <- "LSJ"
+    
     index <- grep(a, areas)
     summaryStats <- data.frame(species = c(spp[index], "Total"))
     
     meanAGBiomass_TonsPerHa <- maxAGBiomass_TonsPerHa <- numeric()
     quantiles <- matrix(NA, nrow = nrow(summaryStats), ncol = length(q))
     colnames(quantiles) <- paste0("quantile", q)
-    # ### area subset
-    # require(rgdal)
-    # BSESubset <- readOGR(paste0(inputFolder, "/subsetShapefile"), "BS_EAST_mod_quadrat")
-    # BSESubset <- spTransform(BSESubset, crs(r))  # need to load
-    # BSESubsetRaster <- rasterize(BSESubset, r)
-    # ###
+    ## loading landtypes
+    readURL <- "https://github.com/dcyr/LANDIS-II_IA_generalUseFiles/raw/master/LandisInputs/"
+    tmpFile <- tempfile()
+    url <- paste(readURL, a, "/landtypes_", a, ".tif", sep="")
+    download.file(url, tmpFile, method="wget")
+    landtypes <- raster(tmpFile)
+    ##
     sppStack <- stack(files[index])
+    sppStack[is.na(landtypes)] <- NA
     sppStack <- stack(sppStack, sum(sppStack))
+    ## considering only active landtypes
     names(sppStack) <- c(spp[index], "Total")
-
+    
     for (i in seq_along(1:nlayers(sppStack))) {
         r <- sppStack[[i]]
         ## using only a subset
@@ -59,15 +61,19 @@ a <- "Acadian"
         quantiles[i, ] <- quantile(rValues, q, na.rm=TRUE)
         print(paste(a, names(r)))
     }
-
+    
     summaryStats <- data.frame(meanAGBiomass_TonsPerHa,
                                maxAGBiomass_TonsPerHa,
                                quantiles)
     summaryStats <- round(summaryStats, 3)
     summaryStats <- data.frame(species = names(sppStack),
                                summaryStats)
-  
-
-
+    
+    
+    
     write.csv(summaryStats, file = paste0("initBiomassSummaryStats_", a, ".csv"), row.names = F)
+#}
+
+
+
 #}

@@ -18,8 +18,7 @@ vegCodes <- read.csv(text = getURL(paste(readURL, "vegCodes.csv", sep="/")))
 ecozones <- read.csv(text = getURL(paste(readURL, "ecoNames.csv", sep="/")))
 
 #areas <- c("AM", "BC", "BP", "BSE", "BSW", "MC", "PM", "TP")
-areas <- "Acadian"
-
+areas <- "LSJ"
 
 
 a <- areas[1]
@@ -50,11 +49,9 @@ require(ggplot2)
     for (i in 1:nlayers(sppStack)) {
         totalAGB <- append(totalAGB, sum(values(sppStack[[i]]), na.rm=TRUE))
     }
-    subsample <- which(totalAGB>1000)
-    sppStack <- sppStack[[subsample]]
     sppStack <- stack(sppStack, sum(sppStack))
     
-    spp <- c(spp[subsample], "Total")
+    spp <- c(spp, "Total")
     names(sppStack) <- formatC(1:nlayers(sppStack), width = 2, flag = "0")
     names(spp) <- names(sppStack)
     spp <- gsub("GENERIC_", "", spp)
@@ -84,12 +81,14 @@ require(ggplot2)
        
      
     ncol <- 5
+    nrow <- ceiling(nrow(sppLabel)/ncol)
+    pWidth <- 10
+    pHeight <- (nrow+1)*2
     zLim <- c(0, ceiling(quantile(sppStack$biomass_tonsPerHa, 0.9999)/10)*10)
     ylim <- range(sppStack$y)
     xlim <- range(sppStack$x)
     ## study area (optional)
 
-    
     
     p <- ggplot(data = sppStack, aes(x = x, y = y)) +
         geom_raster(aes(fill = biomass_tonsPerHa)) +
@@ -104,16 +103,17 @@ require(ggplot2)
         geom_text(aes(x = x, y = y,
                       label = paste(signif(meanBiomass_tonsPerHa, 2), "tons/ha")),
                   colour = "white",
-                  data = data.frame(sppLabel, x = max(xlim), y =  max(ylim)- 30000),
+                  data = data.frame(sppLabel, x = max(xlim), y =  max(ylim)-(diff(ylim)/12.5)),
                   hjust = 1, vjust = 1, size = rel(3), fontface = "bold") +
         coord_equal()
 
 
     png(filename = paste0("initialBiomass_", a, ".png"),
-        width = 10, height = 10, units = "in", res = 300, pointsize = 10)
+        width = pWidth, height = pHeight, units = "in", res = 300, pointsize = 10)
 
 
-        print(p + ggtitle(paste0("k-NN estimates of initial aboveground biomass\n", ecozones[which(ecozones$code == a), "name"])) +
+        print(p + labs(title = paste0("k-NN estimates of initial aboveground biomass\n", ecozones[which(ecozones$code == a), "name"]),
+                       caption = "k-NN estimates of AGB are from Beaudoin et al. 2014.") +
                   theme_dark() +
                   theme(axis.title.x = element_blank(),
                         axis.title.y = element_blank(),
