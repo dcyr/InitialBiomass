@@ -32,8 +32,7 @@ The methodology and known biases associated with the following results are descr
 <img src="README_files/figure-html/mapPlot-1.png" style="display: block; margin: auto auto auto 0;" />
 
 
-###Initial Biomass - K-Nearest Neighbourg Estimations
-####Summary statistics - Total aboveground biomass
+### Summary statistics - Total aboveground biomass  
 
 
 ```
@@ -78,6 +77,8 @@ The methodology and known biases associated with the following results are descr
 ## 10         23.5         49.5        70.3         88.3        117.5
 ## 11         24.4         49.5        68.0         85.5        114.7
 ```
+
+### Summary statistics - Individual species  
 
 Individual species' initial biomass can be found in the following '.csv' tables:
 

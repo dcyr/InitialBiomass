@@ -18,7 +18,7 @@ vegCodes <- read.csv(text = getURL(paste(readURL, "vegCodes.csv", sep="/")))
 ecozones <- read.csv(text = getURL(paste(readURL, "ecoNames.csv", sep="/")))
 
 #areas <- c("AM", "BC", "BP", "BSE", "BSW", "MC", "PM", "TP")
-areas <- "LSJ"
+areas <- "ALPAC"
 
 
 a <- areas[1]
