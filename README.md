@@ -1,8 +1,8 @@
 # Initial Aboveground Biomass - k-NN Estimations
 Dominic cyr  
-Updated on Oct 24 2017
+Updated on Jan 31 2018
 
-This document presents summary statistics of initial tree aboveground biomass as estimated by [Beaudoin et al (2014)][1] for all quadrats that are part of an ongoing simulation experiment conducted within the Project Change project by the Canadian Forest Service (Chapter 4 - Integrated Assessment).
+This document presents summary statistics of initial tree aboveground biomass as estimated by [Beaudoin et al (2014)][1] for several areas where LANDIS-II simulation experiments have been conducted.
 
 The following summary statistics are computed for what are considered 'active' forest pixels in our simulations, i.e. those that are made of at least 50% of productive forest at a 250-m resolution.
 
@@ -29,7 +29,7 @@ The methodology and known biases associated with the following results are descr
 
 
 
-<img src="README_files/figure-html/mapPlot-1.png" title="" alt="" style="display: block; margin: auto auto auto 0;" />
+<img src="README_files/figure-html/mapPlot-1.png" style="display: block; margin: auto auto auto 0;" />
 
 
 ###Initial Biomass - K-Nearest Neighbourg Estimations
@@ -37,53 +37,86 @@ The methodology and known biases associated with the following results are descr
 
 
 ```
-##          SimulationArea meanAGBiomass_TonsPerHa maxAGBiomass_TonsPerHa
-## 1     Atlantic Maritime                    68.0                  199.7
-## 2     Boreal Cordillera                    46.3                  239.5
-## 3          Boreal Plain                    40.2                  161.0
-## 4 Eastern Boreal Shield                    73.7                  179.6
-## 5 Western Boreal Shield                    61.8                  160.0
-## 6    Montane Cordillera                   127.0                  350.0
-## 7      Pacific Maritime                   259.1                  605.4
-## 8           Taiga Plain                    24.9                  149.2
-##   quantile0.05 quantile0.25 quantile0.5 quantile0.75 quantile0.95
-## 1         20.4         46.6        66.4         90.0        118.0
-## 2          0.0          6.8        36.0         78.9        123.7
-## 3          0.0          7.4        36.3         64.2        102.5
-## 4         19.9         55.8        74.3         92.1        124.7
-## 5          0.0         37.5        64.8         88.2        114.2
-## 6         20.1         77.8       127.4        175.5        230.4
-## 7         91.9        185.6       261.2        328.2        430.5
-## 8          0.9          6.3        20.4         36.7         70.3
+##          code                   name LANDIS-II
+## 1     Acadian                Acadian available
+## 10      ALPAC                  ALPAC available
+## 2          AM      Atlantic Maritime available
+## 3          BP           Boreal Plain available
+## 4         BSE  Eastern Boreal Shield available
+## 7      BSEmod      BSE (Boreal only) available
+## 5         BSW  Western Boreal Shield available
+## 6         LSJ         Lac Saint-Jean available
+## 9  NorthShore            North Shore available
+## 12  QcCentral         Central Quebec available
+## 11       QcNb Quebec - New Brunswick available
+## 8      SudStl      Sud Saint-Laurent available
+```
+
+```
+##            SimulationArea meanAGBiomass_TonsPerHa maxAGBiomass_TonsPerHa
+## 1                 Acadian                    63.8                  288.8
+## 2                   ALPAC                    56.6                  306.7
+## 3       Atlantic Maritime                    70.1                  284.0
+## 4            Boreal Plain                    61.2                  256.2
+## 5   Eastern Boreal Shield                    68.0                  276.2
+## 6   Western Boreal Shield                    77.4                  264.8
+## 7          Lac Saint-Jean                    49.6                  316.3
+## 8             North Shore                    59.7                  187.0
+## 9          Central Quebec                    52.5                  260.1
+## 10 Quebec - New Brunswick                    69.8                  288.8
+## 11      Sud Saint-Laurent                    68.3                  277.3
+##    quantile0.05 quantile0.25 quantile0.5 quantile0.75 quantile0.95
+## 1          20.5         44.0        62.8         82.3        109.6
+## 2          12.5         29.6        50.4         80.0        117.4
+## 3          26.6         48.7        67.8         90.6        118.2
+## 4           7.9         36.1        59.2         85.2        117.5
+## 5          11.6         49.1        70.1         88.3        118.1
+## 6          31.2         59.1        78.9         96.3        119.2
+## 7           6.3         26.6        52.9         70.9         87.7
+## 8          10.3         43.2        65.2         79.8         91.9
+## 9          11.1         35.1        53.1         70.1         91.4
+## 10         23.5         49.5        70.3         88.3        117.5
+## 11         24.4         49.5        68.0         85.5        114.7
 ```
 
 Individual species' initial biomass can be found in the following '.csv' tables:
 
-1. Atlantic Maritime ([Display][2]/[Download][3])
-2. Boreal Cordillera ([Display][4]/[Download][5])
-3. Boreal Plain ([Display][6]/[Download][7])
-4. Eastern Boreal Shield ([Display][8]/[Download][9])
-5. Western Boreal Shield ([Display][10]/[Download][11])
-6. Montane Cordillera ([Display][12]/[Download][13])
-7. Pacific Maritime ([Display][14]/[Download][15])
-8. Taiga Plain ([Display][16]/[Download][17])
+1. Acadian ([Display][2]/[Download][3])
+2. ALPAC ([Display][4]/[Download][5])
+3. Atlantic Maritime ([Display][6]/[Download][7])
+4. Boreal Plain ([Display][8]/[Download][9])
+5. Eastern Boreal Shield ([Display][10]/[Download][11])
+6. Western Boreal Shield ([Display][12]/[Download][13])
+7. Lac Saint-Jean ([Display][14]/[Download][15])
+8. North Shore ([Display][16]/[Download][17])
+9. Central Quebec ([Display][18]/[Download][19])
+10. Quebec - New Brunswick ([Display][20]/[Download][21])
+11. Sud Saint-Laurent ([Display][22]/[Download][23])
+
 
 
 [1]: http://www.nrcresearchpress.com/doi/abs/10.1139/cjfr-2013-0401
-[2]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_AM.csv
-[4]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BC.csv
-[6]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BP.csv
-[8]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BSE.csv
-[10]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BSW.csv
-[12]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_MC.csv
-[14]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_PM.csv
-[16]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_TP.csv
-[3]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_AM.csv
-[5]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BC.csv
-[7]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BP.csv
-[9]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BSE.csv
-[11]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BSW.csv
-[13]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_MC.csv
-[15]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_PM.csv
-[17]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_TP.csv
 
+[2]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_Acadian.csv
+[4]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_ALPAC.csv
+[6]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_AM.csv
+[8]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BP.csv
+[10]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BSE.csv
+[12]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_BSW.csv
+[14]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_LSJ.csv
+[16]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_NorthShore.csv
+[18]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_QcCentral.csv
+[20]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_QcNb.csv
+[22]: https://github.com/dcyr/InitialBiomass/blob/master/summaryStats/initBiomassSummaryStats_SudStl.csv
+
+[3]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_Acadian.csv
+[5]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_ALPAC.csv
+[7]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_AM.csv
+[9]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BP.csv
+[11]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BSE.csv
+[13]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_BSW.csv
+[15]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_LSJ.csv
+[17]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_NorthShore.csv
+[19]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_QcCentral.csv
+[21]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_QcNb.csv
+[23]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_SudStl.csv
