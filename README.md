@@ -80,19 +80,19 @@ The methodology and known biases associated with the following results are descr
 
 ### Summary statistics - Individual species  
 
-Individual species' initial biomass can be found in the following '.csv' tables:
+Individual species' initial biomass can be found in the following '.csv' tables and maps:
 
-1. Acadian ([Display][2]/[Download][3])
-2. ALPAC ([Display][4]/[Download][5])
-3. Atlantic Maritime ([Display][6]/[Download][7])
-4. Boreal Plain ([Display][8]/[Download][9])
-5. Eastern Boreal Shield ([Display][10]/[Download][11])
-6. Western Boreal Shield ([Display][12]/[Download][13])
-7. Lac Saint-Jean ([Display][14]/[Download][15])
-8. North Shore ([Display][16]/[Download][17])
-9. Central Quebec ([Display][18]/[Download][19])
-10. Quebec - New Brunswick ([Display][20]/[Download][21])
-11. Sud Saint-Laurent ([Display][22]/[Download][23])
+1. Acadian ([Display][2]/[Download][3]/[Map][24])
+2. ALPAC ([Display][4]/[Download][5]/[Map][25])
+3. Atlantic Maritime ([Display][6]/[Download][7]/[Map][26])
+4. Boreal Plain ([Display][8]/[Download][9]/[Map][27])
+5. Eastern Boreal Shield ([Display][10]/[Download][11]/[Map][28])
+6. Western Boreal Shield ([Display][12]/[Download][13]/[Map][29])
+7. Lac Saint-Jean ([Display][14]/[Download][15]/[Map][30])
+8. North Shore ([Display][16]/[Download][17]/[Map][31])
+9. Central Quebec ([Display][18]/[Download][19]/[Map][32])
+10. Quebec - New Brunswick ([Display][20]/[Download][21]/[Map][33])
+11. Sud Saint-Laurent ([Display][22]/[Download][23]/[Map][34])
 
 
 
@@ -121,3 +121,16 @@ Individual species' initial biomass can be found in the following '.csv' tables:
 [19]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_QcCentral.csv
 [21]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_QcNb.csv
 [23]: https://raw.githubusercontent.com/dcyr/InitialBiomass/master/summaryStats/initBiomassSummaryStats_SudStl.csv
+
+
+[24]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initialBiomass_AM.png
+[25]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_ALPAC.csv
+[26]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_AM.csv
+[27]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_BP.csv
+[28]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_BSE.csv
+[29]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_BSW.csv
+[30]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_LSJ.csv
+[31]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_NorthShore.csv
+[32]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_QcCentral.csv
+[33]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_QcNb.csv
+[34]: https://github.com/dcyr/InitialBiomass/raw/master/figures/initBiomassSummaryStats_SudStl.csv
