@@ -11,4 +11,4 @@ subsetShapefile
 *.html
 *.Rmd
 README_cache
-
+*.R
