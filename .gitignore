@@ -9,6 +9,5 @@ subsetShapefile
 *~
 *.rds
 *.html
-*.Rmd
 README_cache
-*.R
+
