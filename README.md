@@ -1,6 +1,9 @@
 # Initial Aboveground Biomass - k-NN Estimations
-Dominic cyr  
+Dominic Cyr  
 Updated on Jan 31 2018
+
+
+---------
 
 This document presents summary statistics of initial tree aboveground biomass as estimated by [Beaudoin et al (2014)][1] for several areas where LANDIS-II simulation experiments have been conducted.
 
@@ -8,6 +11,7 @@ The following summary statistics are computed for what are considered 'active' f
 
 The methodology and known biases associated with the following results are described in [Beaudoin et al][1]'s paper.
 
+--------
 
 
 
@@ -31,6 +35,7 @@ The methodology and known biases associated with the following results are descr
 
 <img src="README_files/figure-html/mapPlot-1.png" style="display: block; margin: auto auto auto 0;" />
 
+---------
 
 ### Summary statistics - Total aboveground biomass  
 
